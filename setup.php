@@ -65,3 +65,4 @@ $config['keys_file'] = !empty($cli_file) ? $cli_file : $default_file;
 echo 'writing new config into config.json' . PHP_EOL;
 file_put_contents('config.json', json_encode($config));
 
+echo 'done';
