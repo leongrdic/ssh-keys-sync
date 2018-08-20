@@ -1,0 +1,9 @@
+{
+  "api_name": "your_api_provider",
+  "api_url": "https://api_url/user/your_username/keys",
+  "api_options": [
+    "method": "GET",
+    "header": []
+  ]
+  "keys_file": "/home/user/.ssh/authorized_keys"
+}
