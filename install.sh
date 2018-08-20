@@ -18,6 +18,15 @@ git clone https://github.com/leongrdic/ssh-keys-sync.git
 mv ssh-keys-sync/* .
 rm -rf ssh-keys-sync
 
+if [ -f "$dir/config.json" ]; then
+  echo -n "config file config.json already exists, do you want to run the setup again (y/n)? "
+  read prompt
+  if [ "$prompt" != "Y" ] && [ "$prompt" != "y" ]; then
+    echo 'exitting'
+    exit;
+  fi
+fi
+
 php setup.php
 
 echo 'setup done, running the first update to confirm the config is valid'
