@@ -15,10 +15,10 @@ The installer provided in the next section also requires `git` and `crontab`, bu
 
 The easiest way to install the sync script is to run this command while logged in as a user whose keys you want to sync (works only on linux based systems):
 ```
-bash <(curl -o- https://raw.githubusercontent.com/leongrdic/ssh-keys-sync/master/install.sh)
+bash <(curl -o- https://raw.githubusercontent.com/leongrdic/ssh-keys-sync/v1.1/install.sh)
 ```
 
-The installer will then guide you through the setup of this script and will automatically configure a cronjob for your user account. 
+The installer will then guide you through the setup of this script and will automatically configure a cronjob for your user account.
 
 ### The 'manual' way
 
