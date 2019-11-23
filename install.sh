@@ -44,7 +44,7 @@ read minutes
 
 echo 'installing new cron job'
 
-cronjob="*/$minutes * * * * $(which php) $dir/update.php"
+cronjob="*/$minutes * * * * $(which php) $dir/update.php -c $dir/config.json"
 
 crontab -l > tmp-crontab
 echo "$cronjob" >> tmp-crontab
