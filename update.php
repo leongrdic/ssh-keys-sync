@@ -10,7 +10,7 @@ if(json_last_error() !== JSON_ERROR_NONE) echox("couldn't read the config file -
 if(!isset($config['api_url']) || empty($config['api_url'])) echox("missing/wrong api url, exiting", 3);
 if(!isset($config['installed_keys'])) $config['installed_keys'] = [];
 if(!isset($config['keys_file'])) $config['keys_file'] = 'authorized_keys';
-function config_save(){ global $config; file_put_contents($configfile, json_encode($config)); }
+function config_save(){ global $configfile, $config; file_put_contents($configfile, json_encode($config)); }
 
 $keys = json_decode(@file_get_contents($config['api_url'], false, stream_context_create(['http' => $config['api_http_options']])), true);
 if(strpos($http_response_header[0], '200') === false) echox("invalid response from api: ({$http_response_header[0]}); exiting", 4);
